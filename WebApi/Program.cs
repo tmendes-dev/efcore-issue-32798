@@ -26,8 +26,7 @@ namespace WebApi
                                         errorNumbersToAdd: null))
                         .EnableSensitiveDataLogging()
                         .EnableDetailedErrors()
-                        .ConfigureWarnings(c => c.Log((RelationalEventId.CommandExecuting, LogLevel.Debug))),
-                ServiceLifetime.Transient, ServiceLifetime.Singleton);
+                        .ConfigureWarnings(c => c.Log((RelationalEventId.CommandExecuting, LogLevel.Debug))));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

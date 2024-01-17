@@ -28,7 +28,6 @@ namespace WebApi.Controllers
                 _context.Database.EnsureCreated();
                 _context.Entities.Add(new MyEntity() { Field = "TesteFoo",FieldB="FOOOOO"});
                 _context.SaveChanges();
-                _context.Database.ExecuteSql($"ALTER DATABASE MyContext32798 SET COMPATIBILITY_LEVEL=140");
 
                 var value = "Foo";
                 var skip = 1;
